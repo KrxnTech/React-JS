@@ -1,33 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css"
+// import Title from "./Title.jsx" // import
+import ProductTab from "./ProductTab.jsx"
+
+// componenet's 
+
+function Description() {
+  return <p>This is my First React Project 😭</p>
+}
+
+function Button() {
+  return <button>Click Me ✅</button>
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+    // to use multiple component the better way is to use a div ... 
+
+    // <div className="mainbox" id="mainbox">
+    //   <Title/>
+    //   <Description/>
+    //   <Button/>
+    //   <img src="" alt="image-1" />
+    // </div>
+
+    // <>
+    //   <Title />
+    //   <Description />
+    //   <Button />
+    //   {/* <img src="" alt="image-1" /> */}
+    // </>
+
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ProductTab/>
     </>
   )
 }
